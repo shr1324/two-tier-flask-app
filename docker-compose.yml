@@ -10,6 +10,8 @@ services:
       MYSQL_DATABASE: devops
       MYSQL_USER: admin
       MYSQL_PASSWORD: admin
+      - UID=1000
+      - GID=1000
     volumes:
       - ./mysql-data:/var/lib/mysql
       - ./message.sql:/docker-entrypoint-initdb.d/message.sql  
